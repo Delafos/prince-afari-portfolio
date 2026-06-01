@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prince Afari — Frontend Dev & Security Researcher</title>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@300;400;500;700;800;900&family=Newsreader:ital,wght@0,300;0,400;1,300;1,400;1,600&display=swap" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo"><b>PA</b> — Afari</a>
+
+  <div class="nav-center">
+    <a href="#hero" class="nav-pill active">Home</a>
+    <a href="#about" class="nav-pill">About</a>
+    <a href="#skills" class="nav-pill">Skills</a>
+    <a href="#projects" class="nav-pill">Projects</a>
+    <a href="#contact" class="nav-pill">Contact</a>
+  </div>
+
+  <div class="nav-right">
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+      <div class="theme-knob" id="themeKnob">☀️</div>
+    </button>
+    <a href="Myresume.pdf" download class="nav-cv">Download CV</a>
+  </div>
+
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mob-nav" id="mobNav">
+  <a href="#hero" onclick="toggleMenu()">Home</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#skills" onclick="toggleMenu()">Skills</a>
+  <a href="#projects" onclick="toggleMenu()">Projects</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="hero-mesh"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-left">
+    <div class="hero-available">
+      <span class="avail-dot"></span>
+      Available for Work · Accra, Ghana
+    </div>
+
+    <h1 class="hero-h1">
+      <span class="hi">Hello, I'm</span>
+      Prince<br>
+      <span class="stroke">Afari</span><span class="acc">.</span>
+    </h1>
+
+    <p class="hero-tagline">
+      <strong>Frontend Developer</strong> &amp; <strong>Security Researcher</strong> based in Ghana.
+      I build clean, fast interfaces — and hunt the vulnerabilities that break them.
+    </p>
+
+    <div class="hero-btns">
+      <a href="#projects" class="btn-green">View My Work</a>
+      <a href="#contact" class="btn-dim">Get In Touch</a>
+      <a href="Myresume.pdf" download class="btn-dim">Download CV</a>
+    </div>
+
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hm-num">5<span>+</span></div>
+        <div class="hm-label">Projects</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hm-num">3<span>+</span></div>
+        <div class="hm-label">Yrs Coding</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hm-num">2</div>
+        <div class="hm-label">Disciplines</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="initial-orb" aria-label="Prince Afari initials">PA</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span class="marquee-item">HTML / CSS</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">JavaScript</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">React.js</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">Bug Bounty</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">Burp Suite</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">Penetration Testing</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">Photoshop</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">PortSwigger</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">Subfinder</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">HTML / CSS</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">JavaScript</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">React.js</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">Bug Bounty</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">Burp Suite</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">Penetration Testing</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">Photoshop</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">PortSwigger</span><span class="marquee-item marquee-sep">✦</span>
+    <span class="marquee-item">Subfinder</span><span class="marquee-item marquee-sep">✦</span>
+  </div>
+</div>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about" class="section">
+  <div class="section-inner">
+    <div class="s-eyebrow">About Me</div>
+    <h2 class="s-title">Developer.<br>Researcher. <em>Builder.</em></h2>
+    <div class="about-layout">
+      <div class="about-body reveal">
+        <p>I'm <strong>Prince Afari</strong>, a frontend developer and cybersecurity student from Accra, Ghana. I've been building for the web since 2021 — starting with pure HTML and CSS, growing through JavaScript and React, and now exploring penetration testing and bug bounty research.</p>
+        <p>I study at <strong>Ghana Communication Technology University</strong> while pursuing EC-Council certifications, grinding PortSwigger Web Security Academy labs, and practising real-world OSINT and recon techniques.</p>
+        <p>My approach is simple: build things that look exceptional and perform flawlessly — then test them until they break.</p>
+        <div class="about-chips">
+          <span class="chip">Accra, Ghana 🇬🇭</span>
+          <span class="chip">Coding since 2021</span>
+          <span class="chip">Freelance — Open</span>
+          <span class="chip">Remote — Open</span>
+        </div>
+      </div>
+
+      <div class="reveal d2">
+        <div class="edu-cards">
+          <div class="edu-card">
+            <div>
+              <div class="edu-school">Ghana Communication Technology University</div>
+              <div class="edu-cert">Degree — In Progress</div>
+              <div class="edu-loc">Tesano, Accra</div>
+            </div>
+            <div class="edu-yr">2024–Now</div>
+          </div>
+          <div class="edu-card">
+            <div>
+              <div class="edu-school">Abuakwa State College</div>
+              <div class="edu-cert">WASSCE</div>
+              <div class="edu-loc">Kibi</div>
+            </div>
+            <div class="edu-yr">2019–2022</div>
+          </div>
+          <div class="edu-card">
+            <div>
+              <div class="edu-school">St. Joseph The Worker R/C Basic</div>
+              <div class="edu-cert">BECE</div>
+              <div class="edu-loc">Weija</div>
+            </div>
+            <div class="edu-yr">2011–2019</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ═══ -->
+<section id="skills" class="section">
+  <div class="section-inner">
+    <div class="s-eyebrow">Toolkit</div>
+    <h2 class="s-title">Skills &amp; <em>Tools</em></h2>
+    <div class="skills-two">
+      <div id="skillsLeft">
+        <div class="skill-row reveal">
+          <div class="skill-head"><span class="skill-nm">HTML / CSS</span><span class="skill-pc">90%</span></div>
+          <div class="skill-track"><div class="skill-fill g" style="width:90%"></div></div>
+        </div>
+        <div class="skill-row reveal d1">
+          <div class="skill-head"><span class="skill-nm">JavaScript</span><span class="skill-pc">70%</span></div>
+          <div class="skill-track"><div class="skill-fill g" style="width:70%"></div></div>
+        </div>
+        <div class="skill-row reveal d2">
+          <div class="skill-head"><span class="skill-nm">React.js</span><span class="skill-pc">45%</span></div>
+          <div class="skill-track"><div class="skill-fill g" style="width:45%"></div></div>
+        </div>
+        <div class="skill-row reveal d3">
+          <div class="skill-head"><span class="skill-nm">Web App Penetration Testing</span><span class="skill-pc">30%</span></div>
+          <div class="skill-track"><div class="skill-fill b" style="width:30%"></div></div>
+        </div>
+        <div class="skill-row reveal d4">
+          <div class="skill-head"><span class="skill-nm">Burp Suite / Subfinder / Recon</span><span class="skill-pc">25%</span></div>
+          <div class="skill-track"><div class="skill-fill b" style="width:25%"></div></div>
+        </div>
+        <div class="skill-row reveal d5">
+          <div class="skill-head"><span class="skill-nm">Web Security Auditing &amp; Report Writing</span><span class="skill-pc">40%</span></div>
+          <div class="skill-track"><div class="skill-fill b" style="width:40%"></div></div>
+        </div>
+      </div>
+
+      <div class="reveal d1">
+        <div class="tags-section">
+          <div class="tags-label">// Frontend</div>
+          <div class="tags-wrap">
+            <span class="stag">HTML5</span><span class="stag">CSS3</span>
+            <span class="stag">JavaScript</span><span class="stag">Bootstrap</span>
+            <span class="stag">React.js</span><span class="stag">Next.js</span>
+            <span class="stag">Git</span><span class="stag">MS Office</span>
+          </div>
+        </div>
+        <div class="tags-section" style="margin-top:2rem;">
+          <div class="tags-label">// Security</div>
+          <div class="tags-wrap">
+            <span class="stag">Burp Suite</span><span class="stag">Subfinder</span>
+            <span class="stag">PortSwigger</span><span class="stag">OSINT</span>
+            <span class="stag">Recon</span><span class="stag">OWASP Top 10</span>
+            <span class="stag">httpx</span><span class="stag">Gobuster</span>
+            <span class="stag">Nikto</span><span class="stag">WhatWeb</span>
+            <span class="stag">ffuf</span><span class="stag">XSS</span>
+            <span class="stag">SQLi</span><span class="stag">IDOR</span>
+            <span class="stag">Security Audits</span><span class="stag">Bug Bounty Reports</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROJECTS ═══ -->
+<section id="projects" class="section">
+  <div class="section-inner">
+    <div class="s-eyebrow">Selected Work</div>
+    <h2 class="s-title">Recent <em>Projects</em></h2>
+    <p class="s-sub" style="max-width:760px;margin-top:.8rem;">
+      Security projects and writeups:
+      <a href="#" class="proj-link">[Add your security projects link]</a> · HackerOne: <strong>magni_1</strong>
+    </p>
+    <div class="projects-grid">
+      <div class="proj reveal">
+        <div class="proj-index">PROJECT — 01</div>
+        <div class="proj-title">Haven Standard and Luxirious Hotel</div>
+        <div class="proj-desc">Luxury hospitality landing page focused on clear booking flow, strong visuals, and trust-building section design.</div>
+        <div class="proj-stack"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span></div>
+        <a href="#" class="proj-link">Link will be posted soon....</a>
+      </div>
+      <div class="proj reveal d1">
+        <div class="proj-index">PROJECT — 02</div>
+        <div class="proj-title">Zola Restaurant</div>
+        <div class="proj-desc">Restaurant landing page with menu highlights, reservation CTA sections, and a mobile-first customer journey.</div>
+        <div class="proj-stack"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span></div>
+        <a href="#" class="proj-link">Link will be posted soon....</a>
+      </div>
+      <div class="proj reveal d2">
+        <div class="proj-index">PROJECT — 03</div>
+        <div class="proj-title">King's Cut Barber Shop</div>
+        <div class="proj-desc">Barbering shop landing page with service cards, stylist highlights, and conversion-oriented appointment CTAs.</div>
+        <div class="proj-stack"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span></div>
+        <a href="#" class="proj-link">Link will be posted soon....</a>
+      </div>
+      <div class="proj reveal d3">
+        <div class="proj-index">PROJECT — 04</div>
+        <div class="proj-title">Security Projects</div>
+        <div class="proj-desc">Hands-on security lab reports and practical findings from PortSwigger training and audit exercises.</div>
+        <div class="proj-stack"><span class="ptag b">IDOR</span><span class="ptag b">SQLi</span><span class="ptag b">XSS</span><span class="ptag b">Security Audit</span><span class="ptag b">Broken Authentication</span><span class="ptag b">More coming soon...</span></div>
+        <a href="https://github.com/Delafos/Pentesting-Lab-Reports" class="proj-link">My Lab Reports</a>
+      </div>
+      <div class="proj dim reveal d1">
+        <div class="proj-index">PROJECT — 05</div>
+        <div class="proj-title">More Coming Soon</div>
+        <div class="proj-desc">Additional niche landing pages and case studies will be published here progressively.</div>
+        <div class="proj-stack"><span class="ptag b">Next Builds</span><span class="ptag b">Case Studies</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENCE ═══ -->
+<section id="experience" class="section">
+  <div class="section-inner">
+    <div class="s-eyebrow">Credentials</div>
+    <h2 class="s-title">Experience &amp; <em>Training</em></h2>
+    <div class="exp-grid">
+      <div class="exp-card reveal">
+        <div class="exp-top">
+          <div></div>
+          <span class="exp-label">Self-Taught</span>
+        </div>
+        <div class="exp-title">Web Development</div>
+        <div class="exp-sub">Frontend Developer</div>
+        <div class="exp-date">2021 — Present</div>
+        <ul class="exp-list">
+          <li>Built 5+ production-ready projects from scratch</li>
+          <li>Mastered HTML, CSS, JavaScript, Bootstrap and React</li>
+          <li>Designed and developed client-ready landing pages</li>
+          <li>Exploring Next.js and modern tooling</li>
+        </ul>
+      </div>
+      <div class="exp-card reveal d1">
+        <div class="exp-top">
+          <div></div>
+          <span class="exp-label b">In Training</span>
+        </div>
+        <div class="exp-title">Cybersecurity Research</div>
+        <div class="exp-sub">Security Researcher</div>
+        <div class="exp-date">2023 — Present</div>
+        <ul class="exp-list">
+          <li>PortSwigger Web Security Academy labs and practice</li>
+          <li>Proficient with Burp Suite for web app testing</li>
+          <li>OSINT &amp; recon with Subfinder</li>
+        </ul>
+      </div>
+      
+      <div class="exp-card reveal d2">
+        <div class="exp-top">
+          <div></div>
+          <span class="exp-label b">Current</span>
+        </div>
+        <div class="exp-title">University — GCTU</div>
+        <div class="exp-sub">Ghana Comm. Technology University</div>
+        <div class="exp-date">2024 — Present</div>
+        <ul class="exp-list">
+          <li>Degree program at GCTU, Tesano, Accra</li>
+          <li>Combining formal academics with hands-on self-study</li>
+          <li>Building real portfolio alongside coursework</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" class="section">
+  <div class="section-inner">
+    <div class="s-eyebrow">Let's Talk</div>
+    <div class="contact-layout">
+      <div class="reveal">
+        <h2 class="contact-title">Open to<br><em>Opportunities</em></h2>
+        <p class="contact-desc">Whether you need a landing page, a security audit, or a creative collaborator — I'm available. Response within 24 hours.</p>
+        <div class="contact-items">
+          <div class="c-row">
+            <div class="c-icon">✉️</div>
+            <div>
+              <div class="c-label">Email</div>
+              <div class="c-val"><a href="mailto:iamprinceafari@gmail.com">iamprinceafari@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="c-row">
+            <div class="c-icon">📍</div>
+            <div>
+              <div class="c-label">Location</div>
+              <div class="c-val">Accra, Ghana 🇬🇭</div>
+            </div>
+          </div>
+          <div class="c-row">
+            <div class="c-icon">💼</div>
+            <div>
+              <div class="c-label">Availability</div>
+              <div class="c-val">Freelance &amp; Remote — Open</div>
+            </div>
+          </div>
+        </div>
+        <a href="https://wa.me/+233501892685" class="wa-btn" target="_blank">
+          💬 Chat on WhatsApp
+        </a>
+      </div>
+
+      <form class="cform reveal d2" onsubmit="handleSend(event)">
+        <div class="f-row">
+          <div class="fg">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your name" required>
+          </div>
+          <div class="fg">
+            <label>Email</label>
+            <input type="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="fg">
+          <label>Subject</label>
+          <input type="text" placeholder="What's this about?">
+        </div>
+        <div class="fg">
+          <label>Message</label>
+          <textarea placeholder="Tell me about your project or inquiry..."></textarea>
+        </div>
+        <button type="submit" class="btn-send">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="footer-copy">© 2026 Prince Afari · Accra, Ghana · Built with HTML, CSS &amp; care.</p>
+  <div class="footer-links">
+    <a href="mailto:iamprinceafari@gmail.com">Email</a>
+    <a href="https://github.com/Delafos">GitHub</a>
+    <a href="#">LinkedIn</a>
+    <a href="Myresume.pdf" download>CV</a>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
