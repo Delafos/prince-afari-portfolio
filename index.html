@@ -6,7 +6,11 @@
 <title>Prince Afari — Frontend Dev & Security Researcher</title>
 <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@300;400;500;700;800;900&family=Newsreader:ital,wght@0,300;0,400;1,300;1,400;1,600&display=swap" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
 <!-- NAV -->
@@ -235,35 +239,49 @@
       Security projects and writeups:
       <a href="#" class="proj-link">[Add your security projects link]</a> · HackerOne: <strong>magni_1</strong>
     </p>
+
     <div class="projects-grid">
-      <div class="proj reveal">
-        <div class="proj-index">PROJECT — 01</div>
-        <div class="proj-title">Haven Standard and Luxirious Hotel</div>
-        <div class="proj-desc">Luxury hospitality landing page focused on clear booking flow, strong visuals, and trust-building section design.</div>
-        <div class="proj-stack"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span></div>
-        <a href="#" class="proj-link">Link will be posted soon....</a>
-      </div>
-      <div class="proj reveal d1">
-        <div class="proj-index">PROJECT — 02</div>
-        <div class="proj-title">Zola Restaurant</div>
-        <div class="proj-desc">Restaurant landing page with menu highlights, reservation CTA sections, and a mobile-first customer journey.</div>
-        <div class="proj-stack"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span></div>
-        <a href="#" class="proj-link">Link will be posted soon....</a>
-      </div>
+      <a href="https://prince-afari-projects-haven-hotel.vercel.app" class="proj-link">
+        <div class="proj reveal">
+          <div class="proj-index">PROJECT — 01</div>
+          <div class="proj-title">Haven Standard and Luxirious Hotel</div>
+          <div class="proj-desc">Luxury hospitality landing page focused on clear booking flow, strong visuals, and trust-building section design.</div>
+          <div class="proj-stack"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span></div>
+          <label>Prince Afari Projects - Haven Hotel</label>
+        </div>
+      </a>
+
+      <a href="https://prince-afari-projects-zolas-kitchen.vercel.app" class="proj-link">
+        <div class="proj reveal d1">
+          <div class="proj-index">PROJECT — 02</div>
+          <div class="proj-title">Zola Restaurant</div>
+          <div class="proj-desc">Restaurant landing page with menu highlights, reservation CTA sections, and a mobile-first customer journey.</div>
+          <div class="proj-stack"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span></div>
+          <label>Prince Afari Projects - Zola Kitchen</label>
+        </div>
+      </a>
+
+      <a href="https://prince-afari-projects-kings-cut.vercel.app" class="proj-link">
       <div class="proj reveal d2">
         <div class="proj-index">PROJECT — 03</div>
         <div class="proj-title">King's Cut Barber Shop</div>
         <div class="proj-desc">Barbering shop landing page with service cards, stylist highlights, and conversion-oriented appointment CTAs.</div>
         <div class="proj-stack"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JS</span></div>
-        <a href="#" class="proj-link">Link will be posted soon....</a>
+        <label>Prince Afari Projects - King's Cut</label>
       </div>
-      <div class="proj reveal d3">
-        <div class="proj-index">PROJECT — 04</div>
-        <div class="proj-title">Security Projects</div>
-        <div class="proj-desc">Hands-on security lab reports and practical findings from PortSwigger training and audit exercises.</div>
-        <div class="proj-stack"><span class="ptag b">IDOR</span><span class="ptag b">SQLi</span><span class="ptag b">XSS</span><span class="ptag b">Security Audit</span><span class="ptag b">Broken Authentication</span><span class="ptag b">More coming soon...</span></div>
-        <a href="https://github.com/Delafos/Pentesting-Lab-Reports" class="proj-link">My Lab Reports</a>
-      </div>
+      </a>
+
+    
+        <a href="https://github.com/Delafos/Pentesting-Lab-Reports" class="proj-link">
+          <div class="proj reveal d3">
+            <div class="proj-index">PROJECT — 04</div>
+            <div class="proj-title">Security Projects</div>
+            <div class="proj-desc">Hands-on security lab reports and practical findings from PortSwigger training and audit exercises.</div>
+            <div class="proj-stack"><span class="ptag b">IDOR</span><span class="ptag b">SQLi</span><span class="ptag b">XSS</span><span class="ptag b">Security Audit</span><span class="ptag b">Broken Authentication</span><span class="ptag b">More coming soon...</span></div>
+            <label>My Lab Reports</label>
+          </div>
+        </a>
+
       <div class="proj dim reveal d1">
         <div class="proj-index">PROJECT — 05</div>
         <div class="proj-title">More Coming Soon</div>
@@ -364,26 +382,27 @@
         </a>
       </div>
 
-      <form class="cform reveal d2" onsubmit="handleSend(event)">
+      <form class="cform reveal d2" onsubmit="handleSend(event)" action="https://formspree.io/f/xnjypawa" method="POST">
         <div class="f-row">
           <div class="fg">
             <label>Full Name</label>
-            <input type="text" placeholder="Your name" required>
+            <input type="text" name="fullname" placeholder="Your name" required>
           </div>
           <div class="fg">
             <label>Email</label>
-            <input type="email" placeholder="your@email.com" required>
+            <input type="email" name="email" placeholder="your@email.com" required>
           </div>
         </div>
         <div class="fg">
           <label>Subject</label>
-          <input type="text" placeholder="What's this about?">
+          <input type="text" name="subject" placeholder="What's this about?">
         </div>
         <div class="fg">
           <label>Message</label>
-          <textarea placeholder="Tell me about your project or inquiry..."></textarea>
+          <textarea name="message" placeholder="Tell me about your project or inquiry..."></textarea>
         </div>
         <button type="submit" class="btn-send">Send Message →</button>
+        <input type="hidden" name="_next" value="https://princeafari.vercel.app/#contact">
       </form>
     </div>
   </div>

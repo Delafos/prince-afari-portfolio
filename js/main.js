@@ -53,10 +53,18 @@ window.addEventListener('scroll', () => {
 function handleSend(e) {
   e.preventDefault();
   const btn = e.target.querySelector('.btn-send');
-  btn.textContent = 'Message Sent ✓';
-  btn.style.background = '#22c55e';
+  
+  btn.textContent = 'Sending...';
+  btn.style.opacity = '0.7';
+
   setTimeout(() => {
-    btn.textContent = 'Send Message →';
-    btn.style.background = '';
-  }, 3000);
+    btn.textContent = 'Message Sent ✓';
+    btn.style.background = '#22c55e';
+    btn.style.opacity = '1';
+    
+    setTimeout(() => {
+      e.target.submit();
+    }, 1500);
+
+  }, 1000);
 }
