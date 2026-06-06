@@ -52,19 +52,28 @@ window.addEventListener('scroll', () => {
 /* ── Contact form ────────────────────────── */
 function handleSend(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('.btn-send');
-  
+  const form = e.target;
+  const btn = form.querySelector('.btn-send');
+  const data = new FormData(form);
+
   btn.textContent = 'Sending...';
   btn.style.opacity = '0.7';
 
-  setTimeout(() => {
-    btn.textContent = 'Message Sent ✓';
-    btn.style.background = '#22c55e';
-    btn.style.opacity = '1';
-    
-    setTimeout(() => {
-      e.target.submit();
-    }, 1500);
-
-  }, 1000);
+  fetch('https://formspree.io/f/xnjypawa', {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(res => {
+    if (res.ok) {
+      btn.textContent = 'Message Sent ✓';
+      btn.style.background = '#22c55e';
+      btn.style.opacity = '1';
+      form.reset();
+      setTimeout(() => {
+        btn.textContent = 'Send Message →';
+        btn.style.background = '';
+      }, 3000);
+    }
+  });
 }
